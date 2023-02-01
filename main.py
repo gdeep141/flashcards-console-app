@@ -1,17 +1,13 @@
 import random, textwrap, os
 
 
-def get_files(folder):
-    return os.listdir(folder)
-
-
 def custom_print(x):
     print()
     print('\n'.join(textwrap.wrap(x.strip(), width=70)))
     print()
 
 
-def get_random_keys_from_dict(d):
+def get_shuffled_keys(d):
     """ Return a randomly ordered list of keys from a dictionary. """
     keys = list(d.keys())
     random.shuffle(keys)
@@ -27,36 +23,9 @@ def get_dict_from_file(folder, file):
     return d
 
 
-def print_files(dict):
-    for d in dict:
-        print('[' + str(d) + ']', end=" ")
-        print(dict[d])
-
-
 def print_file_list(files):
     for i, f in enumerate(files):
         print('{} - {}'.format(i, f))
-
-
-def ask_user_one_or_multiple():
-    while True:
-        i = input("[1] Single topic or [2] multiple topics? ")
-        if i == '1' or i == '2':
-            return i
-        print("Please enter either [1] for a single topic or [2] for multiple topics.")
-
-
-def ask_user_for_multiple_topics(dict):
-    print("Selecting multiple topics...")
-    files = []
-    while True:
-        f = ask_user_for_topic(dict)
-        if f in files:
-            print('This topic is already chosen.')
-        else:
-            files.append(f)
-            i = input("""Topic selected. Press \'q\' to start study or enter to choose another: """)
-            if i == 'q': return files
 
 
 def ask_user_for_topic(file_list):
@@ -87,7 +56,7 @@ def display_cards_to_user(card_dict, side):
         print('*' * 18)
         print('Shuffling cards...')
         print('*' * 18)
-        services = get_random_keys_from_dict(card_dict)
+        services = get_shuffled_keys(card_dict)
         for s in services:
             if side == '1':
                 card_1 = card_dict[s]
