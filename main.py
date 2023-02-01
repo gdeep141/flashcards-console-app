@@ -1,15 +1,18 @@
 import random, textwrap
 
+
 def custom_print(x):
     print()
     print('\n'.join(textwrap.wrap(x.strip(), width=70)))
     print()
+
 
 def get_random_keys_from_dict(d):
     """ Return a randomly ordered list of keys from a dictionary. """
     keys = list(d.keys())
     random.shuffle(keys)
     return keys
+
 
 def get_dict_from_txt(path):
     d = {}
@@ -19,10 +22,12 @@ def get_dict_from_txt(path):
             d[x[0]] = ','.join(x[1:])
     return d
 
+
 def print_files(dict):
     for d in dict:
         print('[' + str(d) + ']', end=" ")
         print(files_dict[d])
+
 
 def ask_user_one_or_multiple():
     while True:
@@ -30,6 +35,7 @@ def ask_user_one_or_multiple():
         if i == '1' or i == '2':
             return i
         print("Please enter either [1] for a single topic or [2] for multiple topics.")
+
 
 def ask_user_for_multiple_topics(dict):
     print("Selecting multiple topics...")
@@ -43,6 +49,7 @@ def ask_user_for_multiple_topics(dict):
             i = input("""Topic selected. Press \'q\' to start study or enter to choose another: """)
             if i == 'q': return files
 
+
 def ask_user_for_topic(dict):
     """ Asks user to choose a valid number from the dictionary and
     returns the file path for the topic. """
@@ -55,6 +62,7 @@ def ask_user_for_topic(dict):
         except KeyError:
             print('\''+ x + '\' is not a valid option.')
 
+
 def get_first_side_from_user():
     while True:
         t = input("Show [1] description first or [2] service first? ")
@@ -62,6 +70,7 @@ def get_first_side_from_user():
             return t
         else:
             print('Please enter [1] or [2].')
+
 
 def display_cards_to_user(card_dict, side):
     while True:
@@ -87,6 +96,7 @@ def display_cards_to_user(card_dict, side):
             custom_print(card_2)
             i = input(message_2)
             if i == 'q': return
+
 
 if __name__=='__main__':
 
