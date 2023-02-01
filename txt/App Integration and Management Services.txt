@@ -1,0 +1,10 @@
+Amazon Simple Notification Service (SNS), Managed pub/sub (publish / subscribe) messaging service. This can enable fan-out architecture with one message triggering multiple actions. Serverless architecture.
+Amazon Simple Queue Service (SQS), Managed message queue service. This can enable fault tolerant and serverless applications. This supports standard and FIFO (first-in first-out) queues. Serverless architecture.
+AWS Step Functions, Manages the orchestration of complex workflows which are defined using Amazon States Language. It can be leveraged in a serverless architecture.
+AWS CloudTrail, Service that provides audit trail for all services used in an AWS account (across all interaction methods)
+AWS CloudFormation, Managed service for launching infrastructure based on templates. This approach is known as​ infrastructure as code.​ Also provides drift detection to know when infrastructure has veered from what is defined in the template.
+AWS OpsWorks, An infrastructure configuration management service that provides a managed service for Chef and Puppet.
+Amazon CloudWatch, Monitoring and management service that integrates with most AWS services. It provides both metrics and alarms based on those metrics as well as logs
+AWS Config, Provides continual analysis of AWS resources to ensure they are meeting rules defined in the service
+AWS Systems Manager, Service that provides a collection of automation tools and insight into operational data for central management of those cloud or on-premise instances.
+AWS Control Tower, System that launches a multi-account configuration based on AWS best practices

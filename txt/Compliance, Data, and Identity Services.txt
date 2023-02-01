@@ -1,0 +1,12 @@
+AWS Artifact, Portal that provides self-service access to AWS compliance reports and agreements you may have with AWS
+Amazon GuardDuty, Fully-managed service that continually monitors your AWS account and resources for potential malicious behavior and anomalies
+AWS Identity and Access Management (IAM), Service that controls access to AWS resources. This is where you create IAM users, IAM groups, and roles. Policies are attached to identities for permission to access resources.
+Amazon Cognito, User directory service for custom applications that can also enable access to AWS resources for your custom applications
+AWS Storage Gateway, Hybrid-cloud storage service that enables companies to take advantage of cloud storage on their local networks
+AWS DataSync, Automated data transfer service that efficiently transfers data from your local network into AWS
+AWS Glue, Fully-managed s​erverless​ extract, transform, and load (ETL) service
+Amazon Elastic Map Reduce (EMR), Big-data cloud-based tool suite using popular open source tools including Apache Spark, Apache Hive, Presto, and many others.
+AWS Data Pipeline, Data workflow orchestration service that supports multiple AWS services providing extract, transform, and load (ETL) capabilities
+Amazon Athena, Service that enables serverless querying of data stored within Amazon S3 using standard SQL queries
+Amazon Quicksight, Fully-managed Business Intelligence (BI) service enabling self-service data dashboards for data stored in the cloud
+Amazon CloudSearch, Managed search service for custom applications

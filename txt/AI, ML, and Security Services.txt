@@ -1,0 +1,6 @@
+Amazon Rekognition, Computer vision service powered by Machine Learning that can detect objects in images and video
+Amazon Translate, Text translation service powered by Machine Learning that can translate text (either streaming or in batch) into many different languages. It also provides language detection.
+Amazon Transcribe, Audio transcription service powered by Machine Learning that can transcribe audio (either streaming or in batch) in many different languages
+AWS Shield, Managed Distributed Denial of Service (DDoS) protection service for apps running on AWS
+Amazon Macie, Data classification, protection, and monitoring service powered by machine learning for Amazon S3 data
+Amazon Inspector, Automated security assessment service for EC2 instances

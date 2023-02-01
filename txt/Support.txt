@@ -1,0 +1,7 @@
+AWS Support, Service to submit support requests, provided in different tiers
+Personal Health Dashboard, Provided advice and remdiation when AWS experiences events that may impact the users
+AWS Trusted Advisor, Automatically checks usage against best practices, included in basic support, provides different checks based on tier (Cost Optimisation, Performance, Security, Fault Tolerance, Service Limits)
+Basic Support, Core Security and all Service Quota checks, 24/7 access to customer service. No access to support engineers for technical questions.
+Developer Support, Core Security and all Service Quota checks, Individual developers, business hour email access, limited to 1 account
+Business Support, Full set of trusted advisor checks, 24/7 phone, chat, and email access to engineers, unlimited contacts, third-party software support
+Enterprise Support, Dedicated technical account manager, 15 min response time, $15,000 per month plus AWS usage

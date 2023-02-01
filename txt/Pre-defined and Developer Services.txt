@@ -1,0 +1,7 @@
+AWS Service Catalog, Service for offering your organization’s pre-defined IT offerings to other members of your organization in a self-service portal on AWS
+AWS Marketplace, Catalog of third-party software offerings that makes it easy to launch pre-defined solutions onto your AWS account from these vendors
+AWS CodeCommit, Fully-managed source control service using Git
+AWS CodeBuild, Fully-managed build and continuous integration service on AWS
+AWS CodeDeploy, Fully-managed deployment service for applications running on Amazon EC2, AWS Fargate, AWS Lambda, and on-premise servers
+AWS CodePipeline, Fully-managed continuous delivery service on AWS for automating building, deploying, and testing. Integrates with other developer services
+AWS CodeStar, Workflow tool for automatic creation of a continuous delivery pipeline for a custom application using the other developer services

@@ -1,0 +1,8 @@
+Amazon Relational Database Service (RDS), Managed service for relational databases including support for MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, and Amazon Aurora
+Amazon Aurora, MySQL and PostgreSQL compatible database engine for RDS that was built for the cloud
+Amazon Aurora Serverless for RDS, An on-demand and auto-scaling version of Amazon Aurora that does not require managing the underlying infrastructure.
+Amazon DynamoDB, Fully managed NoSQL database service that has extremely low latency and scaling based on configuration. Serverless architecture.
+Amazon Redshift, Managed petabyte scale data warehousing solution on AWS
+Amazon Redshift Spectrum, Service for querying exabytes of data stored in Amazon S3
+Amazon Elasticache, Fully-managed in-memory data store that supports memcached and Redis engines
+AWS Database Migration Service (DMS), Service that enables you to move your data (from popular commercial and open source databases) easily onto the cloud.

@@ -1,0 +1,3 @@
+Edge Locations, Used in CloudFront and Route53, most commonly used infrastructure, over 200 locations
+Availability Zones, Multiple per region, contain multiple (at least 2) data centers, provide redundancy, 69 exist
+Regions, Geographic locations, 22 exist currently with 5 more planned in future

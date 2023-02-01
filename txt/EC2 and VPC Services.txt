@@ -1,0 +1,6 @@
+Auto Scaling Group, EC2 capability that manages a group of EC2 instances that have rules for automated scaling and management which includes health checks for each member of the group
+Elastic Load Balancing, Service that supports routing traffic across multiple targets including EC2 instances, Lambda functions, as well as other targets on AWS
+Security Groups, Firewall-like controls for EC2 instances within a VPC that controls access for inbound and outbound traffic. Instances can have multiple of these
+Network Access Control Lists (ACL), Control for inbound and outbound traffic within a specific subnet in a VPC. Traffic can be allowed or denied based on custom rules
+AWS VPN, Service that supports an encrypted tunnel into a VPC. This can support either site-to-site (from your data center into the VPC) or client (from a single computer into the VPC)
+AWS Secrets Manager, Service that manages secrets (such as passwords, keys, tokens, etc...) used in your custom applications on AWS. It also supports auto-rotation of credentials on supported AWS services

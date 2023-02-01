@@ -1,0 +1,4 @@
+AWS Budgets, Set custom budgets that send alerts after thresholds. Tracks cost per service, service usage, reserved instances, savings plans and more. 
+TCO Calculator, Helps organisations understand what it would cost them to move into the cloud
+Pricing Calculator, Used to estimate cost of future workloads. Replaces Simple Monthly Calculator
+Cost Explorer, Create reports. Breakdowns by various metrics (services, tags, etc). Predicts the next three months of costs. Provides recommendations for cost optimsation. API accessible.

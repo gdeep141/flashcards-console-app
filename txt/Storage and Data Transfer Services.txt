@@ -1,0 +1,6 @@
+Amazon Simple Storage Service (S3), Service that provides object storage for objects up to 5 TB in size - with no limit on the total storage
+S3 Glacier and Glacier Deep Archive, Archive storage classes for Amazon S3. These are designed for objects you need to keep but don’t plan to access.
+Amazon Elastic Block Store (EBS), Persistent block storage designed for use with a single EC2 server. It can scale to support petabytes of data and supports different volume types.
+Amazon Elastic File System (EFS), Fully managed NFS file system designed for Linux workloads with support for petabytes of data. This service can be used in a hybrid cloud ​architecture
+AWS Snowball, Petabyte scale data transfer service where a physical device is delivered to your organization and returned by a local carrier then loaded into Amazon S3
+AWS Snowmobile, Exabyte scale data transfer service where a ruggedized shipping container is sent to your office then loaded into Amazon S3

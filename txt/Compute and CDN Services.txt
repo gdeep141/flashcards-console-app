@@ -1,0 +1,10 @@
+Amazon EC2, Service that provides secure and resizable virtual servers on AWS
+AWS Elastic Beanstalk, Platform (PaaS) for scaling and deploying web apps and services across a specific list of technologies
+AWS Lambda, Service that enables you to use compute resources without having to launch or manage the underlying infrastructure - this is leveraged in serverless architectures
+Amazon Route 53, Highly-available AWS Domain Name Service (DNS) service that can be leveraged in creating highly available and fault tolerant applications. This service is commonly used in a ​serverless architecture.
+Amazon VPC, Logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define
+AWS Direct Connect, Cloud service solution that makes it easy to establish a dedicated network connection from your data center to AWS. This connection does not go over the public Internet.
+Amazon API Gateway, Fully managed API management service that handles concepts like authentication, logging, and throttling for your API layer
+Amazon CloudFront, Amazon‘s global Content Delivery Network (CDN) service that enables your users to get content from a server that is closest to them.
+AWS Global Accelerator, AWS networking service that routes your traffic through the AWS global network, increasing the overall speed through optimizations by AWS.
+Elastic Load Balancing, Service that enables you to distribute traffic across multiple targets (including EC2 ECS Lambda).
