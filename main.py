@@ -93,7 +93,11 @@ def display_cards_to_user(card_dict, side):
 def main():
     file_folder = "./txt"
 
-    file_list = os.listdir(file_folder)
+    try:
+        file_list = os.listdir(file_folder)
+    except FileNotFoundError:
+        print('The folder \'{}\' does not exist. Please update the file_folder variable in main() and try again.'.format(file_folder))
+        return 1
 
     # Print file_list
     for i, f in enumerate(file_list):
