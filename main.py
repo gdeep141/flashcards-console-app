@@ -1,20 +1,31 @@
 import random, textwrap, os
 
 
-def custom_print(x):
+CONSOLE_WIDTH = 70
+
+
+def wrapped_print(x):
     print()
-    print('\n'.join(textwrap.wrap(x.strip(), width=70)))
+    print('\n'.join(textwrap.wrap(x.strip(), width=CONSOLE_WIDTH)))
     print()
 
 
 def get_shuffled_keys(d):
-    """ Return a randomly ordered list of keys from a dictionary. """
+    """
+    Return a randomly ordered list of keys from a dictionary.
+    """
     keys = list(d.keys())
     random.shuffle(keys)
     return keys
 
 
 def get_dict_from_file(folder, file):
+    """
+    Split file by new line and use words before FIRST comma as 'front'
+    and words after first comma as 'back' of card.
+    
+    Supports multiple commas in 'back' of card.
+    """
     d = {}
     with open(folder + '/' + file, 'r') as f:
         for l in f.readlines():
@@ -29,8 +40,10 @@ def print_file_list(files):
 
 
 def ask_user_for_topic(file_list):
-    """ Asks user to choose a valid number from the dictionary and
-    returns the file path for the topic. """
+    """
+    Asks user to choose a valid number from the dictionary and
+    returns the file path for the topic.
+    """
     while True:
         x = input("Select a topic or leave blank to begin: ")
         if x == '' : return x
@@ -52,28 +65,28 @@ def get_first_side_from_user():
 
 
 def display_cards_to_user(card_dict, side):
+    """
+    Will display cards to user on infinite loop until user
+    enters 'q' to quit.
+    """
     while True:
-        print('*' * 18)
-        print('Shuffling cards...')
-        print('*' * 18)
+        print('*' * CONSOLE_WIDTH)
+        print('Shuffling cards... (at any time press Enter to continue or q to quit)')
+        print('*' * CONSOLE_WIDTH)
         services = get_shuffled_keys(card_dict)
-        for s in services:
+        for service in services:
             if side == '1':
-                card_1 = card_dict[s]
-                message_1 = "PRESS ENTER TO VIEW THE SERVICE: "
-                card_2 = s
-                message_2 = "PRESS ENTER TO VIEW THE NEXT DESCRIPTION: "
+                front = card_dict[service]
+                back = service
             else:
-                card_1 = s
-                message_1 = "PRESS ENTER TO VIEW THE DESCRIPTION: "
-                card_2 = card_dict[s]
-                message_2 = "PRESS ENTER TO VIEW THE NEXT SERVICE: "
+                front = service
+                back = card_dict[service]
             
-            custom_print(card_1)
-            i = input(message_1)
+            wrapped_print(front)
+            i = input()
             if i == 'q': return
-            custom_print(card_2)
-            i = input(message_2)
+            wrapped_print(back)
+            i = input('-' * CONSOLE_WIDTH)
             if i == 'q': return
 
 
