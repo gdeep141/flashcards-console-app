@@ -1,4 +1,8 @@
-import random, textwrap
+import random, textwrap, os
+
+
+def get_files(folder):
+    return os.listdir(folder)
 
 
 def custom_print(x):
@@ -14,9 +18,9 @@ def get_random_keys_from_dict(d):
     return keys
 
 
-def get_dict_from_txt(path):
+def get_dict_from_file(folder, file):
     d = {}
-    with open(path, 'r') as f:
+    with open(folder + '/' + file, 'r') as f:
         for l in f.readlines():
             x = l.split(',')
             d[x[0]] = ','.join(x[1:])
@@ -27,6 +31,11 @@ def print_files(dict):
     for d in dict:
         print('[' + str(d) + ']', end=" ")
         print(dict[d])
+
+
+def print_file_list(files):
+    for i, f in enumerate(files):
+        print('{} - {}'.format(i, f))
 
 
 def ask_user_one_or_multiple():
@@ -50,22 +59,23 @@ def ask_user_for_multiple_topics(dict):
             if i == 'q': return files
 
 
-def ask_user_for_topic(dict):
+def ask_user_for_topic(file_list):
     """ Asks user to choose a valid number from the dictionary and
     returns the file path for the topic. """
     while True:
         x = input("Select a topic or leave blank to begin: ")
         if x == '' : return x
         try:
-            file = 'txt/' + dict[x] + '.txt'
-            return file
-        except KeyError:
+            return file_list[int(x)]
+        except TypeError:
+            print('Please enter a valid number')
+        except IndexError:
             print('\''+ x + '\' is not a valid option.')
-
+            
 
 def get_first_side_from_user():
     while True:
-        t = input("Show [1] description first or [2] service first? ")
+        t = input("Show description first [1] or service first [2]? ")
         if t == '1' or t == '2':
             return t
         else:
@@ -99,24 +109,25 @@ def display_cards_to_user(card_dict, side):
 
 
 def main():
-    files_dict = {
-        '1': 'Storage and Data Transfer Services',
-        '2': 'Compute and CDN Services',
-        '3': 'App Integration and Management Services',
-        '4': 'Database Services and Utilities',
-        '5': 'Compliance, Data, and Identity Services',
-        '6': 'AI, ML, and Security Services',
-        '7': 'EC2 and VPC Services',
-        '8': 'Pre-defined and Developer Services'
-    }
+    file_folder = "./txt"
 
-    print_files(files_dict)
+    file_list = os.listdir(file_folder)
 
+    # Print file_list
+    for i, f in enumerate(file_list):
+        print('{} - {}'.format(i, f))
+
+    # Get topics to study from user
     cards = {}
+    files_chosen = []
     while True:
-        path = ask_user_for_topic(files_dict)
-        if path == '': break
-        cards = {**cards, **get_dict_from_txt(path)}
+        file = ask_user_for_topic(file_list)
+        if file == '':
+            break
+        else:
+            if file not in files_chosen:
+                cards = {**cards, **get_dict_from_file(file_folder, file)}
+            files_chosen.append(file)
         
     if cards == {}:
         print('No topics were selected')
