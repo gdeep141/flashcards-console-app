@@ -26,7 +26,7 @@ def get_dict_from_txt(path):
 def print_files(dict):
     for d in dict:
         print('[' + str(d) + ']', end=" ")
-        print(files_dict[d])
+        print(dict[d])
 
 
 def ask_user_one_or_multiple():
@@ -98,8 +98,7 @@ def display_cards_to_user(card_dict, side):
             if i == 'q': return
 
 
-if __name__=='__main__':
-
+def main():
     files_dict = {
         '1': 'Storage and Data Transfer Services',
         '2': 'Compute and CDN Services',
@@ -110,6 +109,7 @@ if __name__=='__main__':
         '7': 'EC2 and VPC Services',
         '8': 'Pre-defined and Developer Services'
     }
+
     print_files(files_dict)
 
     cards = {}
@@ -123,3 +123,8 @@ if __name__=='__main__':
     else:
         side = get_first_side_from_user()
         display_cards_to_user(cards, side)
+
+
+if __name__=='__main__':
+    main()
+ 
