@@ -29,8 +29,9 @@ def get_dict_from_file(folder, file):
     d = {}
     with open(folder + '/' + file, 'r') as f:
         for l in f.readlines():
-            x = l.split(',')
-            d[x[0]] = ','.join(x[1:])
+            if not l.startswith('#') and not len(l.strip()) == 0:  # Ignore comments and empty lines
+                x = l.split(',')
+                d[x[0]] = ','.join(x[1:])
     return d
 
 
@@ -57,7 +58,7 @@ def ask_user_for_topic(file_list):
 
 def get_first_side_from_user():
     while True:
-        t = input("Show description first [1] or service first [2]? ")
+        t = input("Show front [1] or back [2]? ")
         if t == '1' or t == '2':
             return t
         else:
@@ -75,7 +76,7 @@ def display_cards_to_user(card_dict, side):
         print('*' * CONSOLE_WIDTH)
         services = get_shuffled_keys(card_dict)
         for service in services:
-            if side == '1':
+            if side == '2':
                 front = card_dict[service]
                 back = service
             else:
@@ -91,7 +92,7 @@ def display_cards_to_user(card_dict, side):
 
 
 def main():
-    file_folder = "./txt"
+    file_folder = "./csa"
 
     try:
         file_list = os.listdir(file_folder)
