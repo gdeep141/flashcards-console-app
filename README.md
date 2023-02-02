@@ -2,7 +2,7 @@
 
 Reads text files from a defined folder and converts each line into a flashcard.
 
-Each line is split where everything before the first comma is the 'front' of the card and everything after is the 'back'.
+Each line is split where everything before `:::` is the front of the card and everything after is the back.
 
 Each folder represents an exam.
 
