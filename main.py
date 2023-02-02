@@ -131,7 +131,9 @@ def main():
         else:
             if file not in files_chosen:
                 cards = {**cards, **get_cards_from_file(file_folder, file)}
-            files_chosen.append(file)
+                files_chosen.append(file)
+            else:
+                print(file + ' has already been added')
         
     if cards == {}:
         print('No topics were selected')
