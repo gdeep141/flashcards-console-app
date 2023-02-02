@@ -21,8 +21,8 @@ def get_shuffled_keys(d):
 
 def get_dict_from_file(folder, file):
     """
-    Split file by new line and use words before FIRST comma as 'front'
-    and words after first comma as 'back' of card.
+    Split file by line and use words before ' ::: ' in each line as front of card
+    and words after ' ::: ' as back of card.
     
     Supports multiple commas in 'back' of card.
     """
@@ -30,8 +30,8 @@ def get_dict_from_file(folder, file):
     with open(folder + '/' + file, 'r') as f:
         for l in f.readlines():
             if not l.startswith('#') and not len(l.strip()) == 0:  # Ignore comments and empty lines
-                x = l.split(',')
-                d[x[0]] = ','.join(x[1:])
+                x = l.split(' ::: ')
+                d[x[0]] = x[1]
     return d
 
 
@@ -72,7 +72,7 @@ def display_cards_to_user(card_dict, side):
     """
     while True:
         print('*' * CONSOLE_WIDTH)
-        print('Shuffling cards... (at any time press Enter to continue or q to quit)')
+        print('Shuffling cards... at any time press Enter to continue or q to quit')
         print('*' * CONSOLE_WIDTH)
         services = get_shuffled_keys(card_dict)
         for service in services:
