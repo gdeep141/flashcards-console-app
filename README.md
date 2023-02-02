@@ -1,8 +1,6 @@
 # flashcards-console-app
 
-Reads text files from a defined folder and converts each line into a flashcard.
-
-Each line is split where everything before `:::` is the front of the card and everything after is the back.
+Reads text files from a defined folder and converts pairs of lines into a flashcard.
 
 Each folder represents an exam.
 
