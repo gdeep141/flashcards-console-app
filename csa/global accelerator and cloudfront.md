@@ -1,22 +1,22 @@
 # Cloudfront
 
-Caches content at edge locatiosn all over the world for faster delivery to users
+Caches content at edge locations all over the world for faster delivery to users
 AWS Cloudfront
 
-How can you reduce latency when distrubing content to global users?
+How can you reduce latency when distributing content to global users?
 Cache content at Edge Locations with AWS CloudFront
 
 A content delivery network that makes end user's journeys shorter by terminating closer to them.
 AWS CloudFront
 
 What are four sources for AWS CloudFront?
-Public EC2 Instances, Public Application Load Balancers, S3 buckets, and any other HTTP backend
+Public EC2s, Public ALBs, S3 buckets, and any other HTTP backend
 
 What are three pricing strategies for AWS CloudFront?
 All (every location), 200 least expensive regions , 100 least expensive regions
 
-Do you pay a monthly fee for AWS CloudFront?
-No, it's pay as you go for data transferred
+What is the pay model for AWS CloudFront?
+Pay as you go for data transferred
 
 How can you invalidate cached content served at edge locations when content in the backend changes?
 AWS Cloudfront Invalidation
