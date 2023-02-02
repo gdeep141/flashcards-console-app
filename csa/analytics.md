@@ -58,10 +58,72 @@ AWS Glue Studio
 Run ETL as streaming jobs (from streaming datasources such as kinesis) instead of batch jobs
 AWS Glue Streaming ETL
 
-# Data Lake Formation
+# DATA LAKE FORMATION
 
 Combine structured and unstructured data from multiple sources into a single source (using AWS Glue)
 AWS Data Lakes
 
 Use machine learning to automate complex steps to combine data from multiple sources
 AWS Data Lakes
+
+How long does AWS Data Lakes take to get started?
+A few days
+
+Centralized permissions for analytics sources - better than setting up security in multiple places
+AWS Data Lakes
+
+# MSK
+
+Fully managed Apache Kafka Cluster on AWS
+AWS MSK (Managed Streaming for Kafka)
+
+An alternative to AWS Kinesis for data streaming, where you can store data indefinitely on EBS Volumes and have a higher message size limit than Kinesis's 1MB
+AWS MSK (Managed Streaming for Kafka)
+
+Run an Apache Kafka Cluster without managing capacity
+AWS MSK Serverless
+
+# Redshift
+
+Online analysis and data warehousing for PETABYTES of data
+AWS Redshift
+
+Load massive amounts of data, but then get faster joins and queries due to indexing
+AWS Redshift
+
+Uses nodes in a cluster to load and query PETABYTES of data
+AWS Redshift
+
+Query petabytes of data stored in s3 without loading it first, by leveraging 1000s of nodes
+AWS Redshift Spectrum
+
+What's the difference between EMR and Redshift?
+Both use clusters for analysing big data, but EMR uses Hadoop and is best for unstructured data. Redshift is pure SQL and better for structured data.
+
+Pay as you go model for analysing big data.
+AWS Redshift
+
+# Quicksight
+
+Interactive business intelligence dashboard with its own users (not IAM users)
+AWS Quicksight
+
+What engine does AWS Quicksight use for memory computation?
+SPICE Engine, if the data is loaded into QuickSight
+
+What pay model does AWS Quicksight use?
+Per-sesion
+
+Perform ad-hoc queries on data in s3 with a BI dashboard
+AWS Quicksight
+
+# Kinesis data analytics
+
+Perform SQL statements from Kinesis Firehose or Kinesis Data Streams and send back into Firehose or Datastreams
+Kinesis Data Analytics for SQL Applications
+
+Use Flink (more powerful than SQL) to analyse data from Kinesis Data Streams or Amazon MSK
+Kinesis Data Analytics for Apache Flink
+
+What is a more powerful tool than SQL that can analyse data streaming from Kinesis Data Streams or Amazon MSK only?
+Kinesis Data Analytics for Apache Flink
