@@ -45,3 +45,20 @@ Load Balancing is free for an ALB but costs money for an NLB and GLB.
 
 What are the min and max times for Connection Draining / Deregistration Delay?
 0 seconds up to 600 seconds
+
+# Scaling Policies
+
+What are the 4 scaling policies?
+Target Tracking, Step Scaling, Scheduled Actions, Predictive Scaling
+
+Which scaling policy aims to keep the CPU at a certain level?
+Target Tracking
+
+Which scaling policy uses thresholds to increase instances?
+Step scaling
+
+Which scaling policy would increase the number of instances at 5pm on Friday?
+Scheduled Actions
+
+Which scaling policy uses machine learning to predict usage and resources needed?
+Predictive scaling
