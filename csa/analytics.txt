@@ -1,0 +1,12 @@
+# Athena
+Serverless way to query data in S3 using SQL. Pay per TB scanned
+Athena
+
+Used for ad-hoc queries / business intelligence / to query CloudTrail trails
+Athena
+
+How can you improve Athena performance / cost savings?
+Use AWS Glue or Apache Parquet to only retrieve the columns needed for scanning.
+
+Column-oriented data format designed for efficient data storage and retrieval
+Apache Parquet

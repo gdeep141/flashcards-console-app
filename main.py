@@ -35,6 +35,23 @@ def get_dict_from_file(folder, file):
     return d
 
 
+def get_cards_from_file(folder, file):
+    with open(folder + '/' + file, 'r') as f:
+        content = f.readlines()
+
+    cards = {}
+    pair_added = False
+    for index, line in enumerate(content):
+        if not line.startswith('#') and not len(line.strip()) == 0:
+            if not pair_added:
+                cards[content[index]] = content[index + 1]
+                pair_added = True
+            else:
+                pair_added = False
+    
+    return cards
+
+
 def print_file_list(files):
     for i, f in enumerate(files):
         print('{} - {}'.format(i, f))
@@ -113,7 +130,7 @@ def main():
             break
         else:
             if file not in files_chosen:
-                cards = {**cards, **get_dict_from_file(file_folder, file)}
+                cards = {**cards, **get_cards_from_file(file_folder, file)}
             files_chosen.append(file)
         
     if cards == {}:
