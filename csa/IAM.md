@@ -74,3 +74,11 @@ aws:PrincipalOrgID
 
 You've set a policy on objects within a bucket using the ARN arn:aws:s3:::test, but the policy isn't affecting the objects in the bucket? What could be the issue?
 ARNs must end in a /_ to affect objects within the bucket, the correct ARN would be arn:aws:s3:::test/_
+
+# IAM Identity Center
+
+How can you manage one login to multipl AWS accounts within an Organisation?
+IAM Identity Center
+
+What identity providers can be used for IAM Identity Center?
+Built-in identity center or 3rd party providers (e.g. microsoft AD)
