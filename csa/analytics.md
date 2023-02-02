@@ -130,3 +130,17 @@ Kinesis Data Analytics for Apache Flink
 
 What is a more powerful tool than SQL that can analyse data streaming from Kinesis Data Streams or Amazon MSK only?
 Kinesis Data Analytics for Apache Flink
+
+# Opensearch
+
+Search a database for partial matches
+AWS OpenSearch
+
+A good way to search databases such as DynamoDB for partial matches
+AWS OpenSearch
+
+How can data be loaded from other data sources into AWS OpenSearch
+Kinesis Firehose or a Lambda Function that monitors changes to the data source
+
+Is OpenSearch a fully-managed, SQL search engine?
+No, the instances must be created manually and OpenSearch is NoSQL
