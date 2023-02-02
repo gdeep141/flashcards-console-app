@@ -1,13 +1,13 @@
 # ATHENA
 
 Serverless way to query data in S3 using SQL. Pay per TB scanned
-Aws Athena
+AWS Athena
 
 Used for ad-hoc queries / business intelligence / to query CloudTrail trails
 AWS Athena
 
 How can you improve Athena performance / cost savings?
-Use AWS Glue or Apache Parquet to only retrieve the columns needed for scanning.
+Use AWS Glue / Apache Parquet to only retrieve the columns needed for scanning.
 
 Column-oriented data format designed for efficient data storage and retrieval
 Apache Parquet
@@ -49,7 +49,7 @@ AWS Glue Job Bookmarks
 Create a combined view across multiple data stores using SQL
 AWS Glue Elastic Views
 
-Clean and normalise data using pre-built transform
+Clean and normalise data using pre-built transforms
 AWS Glue Databrew
 
 A GUI to create, run, and monitor ETL jobs
@@ -117,12 +117,15 @@ Per-sesion
 Perform ad-hoc queries on data in s3 with a BI dashboard
 AWS Quicksight
 
+Athena and Redshift analytics can be used as sources for this service
+AWS Quicksight
+
 # Kinesis data analytics
 
 Perform SQL statements from Kinesis Firehose or Kinesis Data Streams and send back into Firehose or Datastreams
 Kinesis Data Analytics for SQL Applications
 
-Use Flink (more powerful than SQL) to analyse data from Kinesis Data Streams or Amazon MSK
+Uses Flink (more powerful than SQL) to analyse data from Kinesis Data Streams or Amazon MSK
 Kinesis Data Analytics for Apache Flink
 
 What is a more powerful tool than SQL that can analyse data streaming from Kinesis Data Streams or Amazon MSK only?
