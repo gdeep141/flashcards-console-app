@@ -42,3 +42,35 @@ AWS Control Tower Guardrails
 
 What are the two types of AWS Control Tower Guardrails?
 Preventive Guardrail and Detective Guardrail (monitoring)
+
+# Roles and policies
+
+What tools can be used to generate and test policies?
+AWS Policy Generator and AWS Policy Simulator
+
+What two services require IAM roles instead of policies?
+ECS tasks and Kinesis Data Streams
+
+What is the difference in using a role as a proxy vs a resource-based policy?
+When using a role as a proxy you give up your original permissions, when using a policy you do not,
+
+What sets the maximum permissions an IAM entity can get, regardless of policies attached to that entity?
+IAM Permission Boundaries
+
+What managed policy restricts the client IP from which API calls are made?
+aws:SourceIP
+
+What managed policy restricts the region the API calls are made to?
+aws:RequestedRegion
+
+What managed policy restricts based on tags?
+ec2:ResourceTag
+
+What managed policy forces MFA?
+aws:MultiFactorAuthPresent
+
+What managed policy restricts accesses to accounts that are members of an organisation?
+aws:PrincipalOrgID
+
+You've set a policy on objects within a bucket using the ARN arn:aws:s3:::test, but the policy isn't affecting the objects in the bucket? What could be the issue?
+ARNs must end in a /_ to affect objects within the bucket, the correct ARN would be arn:aws:s3:::test/_
