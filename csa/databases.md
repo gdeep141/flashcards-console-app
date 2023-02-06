@@ -39,10 +39,16 @@ Does Elasticache require a code change in your existing application?
 Yes
 
 What are 5 use cases for Elasticache?
-Key/value store, user session data, frequent reads / less writes, cache queries and aggregate data
+Key/value store, user session data, frequent reads / less writes, cache queries, and cache aggregated data
 
 Can Elasticache use SQL?
 No
+
+Which Elasticache DB is multi-az, persistent, and highly available?
+Redis
+
+Which Elasticache DB uses multiple nodes, has no persistence and is not highly available?
+Memcached
 
 # DynamoDB
 
@@ -121,5 +127,5 @@ Amazon Timestream
 What two databases are NoSQL?
 DynamoDB and DocumentDB
 
-This "database" is a key value store suitable for large objects
+This database is a key value store suitable for large objects
 Amazon S3
