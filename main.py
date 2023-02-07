@@ -64,10 +64,10 @@ def ask_user_for_topic(file_list):
     """
     while True:
         x = input("Select a topic or leave blank to begin: ")
-        if x == '' : return x
+        if x == '' or x == 'q' : return x
         try:
             return file_list[int(x)]
-        except TypeError:
+        except ValueError:
             print('Please enter a valid number')
         except IndexError:
             print('\''+ x + '\' is not a valid option.')
@@ -115,7 +115,7 @@ def main():
         file_list = os.listdir(file_folder)
     except FileNotFoundError:
         print('The folder \'{}\' does not exist. Please update the file_folder variable in main() and try again.'.format(file_folder))
-        return 1
+        return -1
 
     # Print file_list
     for i, f in enumerate(file_list):
@@ -126,14 +126,19 @@ def main():
     files_chosen = []
     while True:
         file = ask_user_for_topic(file_list)
+        
+        if file == 'q':
+            print("Quitting...")
+            return -1
+
         if file == '':
             break
+
+        if file not in files_chosen:
+            cards = {**cards, **get_cards_from_file(file_folder, file)}
+            files_chosen.append(file)
         else:
-            if file not in files_chosen:
-                cards = {**cards, **get_cards_from_file(file_folder, file)}
-                files_chosen.append(file)
-            else:
-                print(file + ' has already been added')
+            print(file + ' has already been added')
         
     if cards == {}:
         print('No topics were selected')
