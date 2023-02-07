@@ -24,6 +24,9 @@ AWS Cloudfront Invalidation
 How can you restrict access to users in specific locations accessing cached content through a CloudFront distribution?
 CloudFront geographic restrictions
 
+Which region is cloudfront always in?
+us-east-1
+
 # Global Accelerator
 
 How can you speed up user journeys to your application without terminating the user journey at edge locations

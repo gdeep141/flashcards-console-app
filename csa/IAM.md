@@ -82,3 +82,11 @@ IAM Identity Center
 
 What identity providers can be used for IAM Identity Center?
 Built-in identity center or 3rd party providers (e.g. microsoft AD)
+
+# MISC
+
+What URL allows EC2 instances to retrieve metadata about themselves?
+169.254.169.254/latest/meta-data/
+
+What is the default region when no region is specified?
+us-east-1
