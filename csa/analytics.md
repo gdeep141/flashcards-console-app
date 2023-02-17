@@ -91,7 +91,7 @@ AWS Redshift
 Load massive amounts of data, but then get faster joins and queries due to indexing
 AWS Redshift
 
-Uses nodes in a cluster to load and query PETABYTES of data
+Uses nodes in a cluster to load and SQL QUERY petabytes of data
 AWS Redshift
 
 Query petabytes of data stored in s3 without loading it first, by leveraging 1000s of nodes
@@ -112,7 +112,7 @@ What engine does AWS Quicksight use for memory computation?
 SPICE Engine, if the data is loaded into QuickSight
 
 What pay model does AWS Quicksight use?
-Per-sesion
+Per-session
 
 Perform ad-hoc queries on data in s3 with a BI dashboard
 AWS Quicksight
