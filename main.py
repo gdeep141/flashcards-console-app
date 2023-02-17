@@ -57,14 +57,19 @@ def print_file_list(files):
         print('{} - {}'.format(i, f))
 
 
-def ask_user_for_topic(file_list):
+def ask_user_for_topic(file_list, first_file):
     """
     Asks user to choose a valid number from the dictionary and
     returns the file path for the topic.
     """
     while True:
-        x = input("Select a topic or leave blank to begin: ")
+        if first_file:
+            x = input("Choose a topic: ") 
+        else:
+            x = input("Choose another topic or leave blank to begin: ")
+
         if x == '' or x == 'q' : return x
+
         try:
             return file_list[int(x)]
         except ValueError:
@@ -125,7 +130,10 @@ def main():
     cards = {}
     files_chosen = []
     while True:
-        file = ask_user_for_topic(file_list)
+        if files_chosen == []:
+            file = ask_user_for_topic(file_list, first_file=True)
+        else:
+            file = ask_user_for_topic(file_list, first_file=False)
         
         if file == 'q':
             print("Quitting...")
